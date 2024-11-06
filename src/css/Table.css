@@ -1,0 +1,60 @@
+.table-container th, .table-container td {
+    padding: 3px ; /* Set to a smaller value for reduced height */
+    vertical-align: middle; /* Optional: ensures text is vertically centered */
+}
+
+.table-container {
+    max-height: 500px; /* Set a maximum height for the table container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #dee2e6; /* Optional: Add a border around the table */
+    border-radius: 0.25rem; /* Optional: Round the corners of the border */
+    background-color: #fff; /* Optional: Set a background color */
+}
+
+.table-body-container {
+    display: block; /* Allow the body to scroll */
+    max-height: 300px; /* Set max height for the body, adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+th {
+    position: sticky; /* Make headers sticky */
+    top: 0; /* Stick to the top */
+    background-color: white; /* Set background color for headers */
+    z-index: 10; /* Ensure headers are above other content */
+}
+
+thead th {
+    border-bottom: 2px solid #dee2e6; /* Add a bottom border for the header */
+}
+
+tbody tr {
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+tbody tr:hover {
+    background-color: #f2f2f2; /* Highlight row on hover */
+}
+
+.discreet-link {
+    color: inherit;         /* Inherit the text color from the parent element */
+    text-decoration: none;   /* Remove the underline */
+}
+
+.discreet-link:hover {
+    text-decoration: underline; /* Optionally add underline only on hover */
+    color: inherit;         /* Ensure the color remains consistent */
+}
+
+/* Style for the Spotify logo in the table */
+.spotify-logo {
+    width: 20px;  /* Adjust the width of the logo */
+    height: auto;  /* Maintain the aspect ratio */
+    cursor: pointer;  /* Make it appear clickable */
+    display: inline-block;  /* Ensure it aligns well with text */
+}

@@ -1,0 +1,17 @@
+/* Navbar.css */
+.nav-link {
+    padding: 10px 15px; /* Add some padding for the links */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.nav-link.active {
+    background-color: #a8ffc2; /* Change to your preferred active color */
+    color: white; /* Change text color for contrast */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.navbar {
+    margin-bottom: 10px; /* Space below the navbar */
+    margin: 0px auto; /* Center the navbar */
+    width: 80%; /* Allow responsiveness */
+}
