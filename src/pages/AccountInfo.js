@@ -12,7 +12,10 @@ const AccountInfo = () => {
         const fetchUserInfo = async () => {
             document.title = "Loading...";
             try {
-                const { data } = await axios.get('http://localhost:8000/user/info', { withCredentials: true });
+                const { data } = await axios.get('https://uxk5aw44j1.execute-api.eu-west-2.amazonaws.com/dev/user/info', {
+                    withCredentials: true, // Ensure cookies are sent with the request
+                });
+
                 setUserInfo(data);
             } catch (err) {
                 setError(err);

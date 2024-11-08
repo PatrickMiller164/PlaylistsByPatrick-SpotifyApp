@@ -14,7 +14,7 @@ const TopTracks = () => {
     useEffect(() => {
         const fetchTopTracks = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/user/top_tracks', { withCredentials: true });
+                const response = await axios.get('https://uxk5aw44j1.execute-api.eu-west-2.amazonaws.com/dev/user/top_tracks', { withCredentials: true });
                 setTopTracks(response.data.top_tracks);
             } catch (error) {
                 setError(error);

@@ -13,7 +13,7 @@ const Playlists = () => {
     useEffect(() => {
         const fetchPlaylists = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/user/playlists', { withCredentials: true });
+                const response = await axios.get('https://uxk5aw44j1.execute-api.eu-west-2.amazonaws.com/dev/user/playlists', { withCredentials: true });
                 setPlaylists(response.data.playlists);
             } catch (error) {
                 setError(error);
@@ -44,19 +44,12 @@ const Playlists = () => {
             <h4 className="text-left">Your Playlists</h4>
             <div className="table-container mt-4">
                 <table className="table table-striped">
-                    <thead>
-                        <tr>
-                            <th></th> {/* New column for the logo */}
-                            <th>Name</th>
-                            <th># of Songs</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th></th><th>Name</th><th># of Songs</th></tr></thead>
                     <tbody>
                         {playlists.length > 0 ? (
                             playlists.map((playlist, index) => (
                                 <tr key={index}>
                                     <td>
-                                        {/* Add the Spotify logo with a link */}
                                         <a href={playlist.URL} target="_blank" rel="noopener noreferrer">
                                             <img src={spotifyLogo} alt="Spotify Logo" className="spotify-logo" />
                                         </a>
@@ -70,9 +63,7 @@ const Playlists = () => {
                                 </tr>
                             ))
                         ) : (
-                            <tr>
-                                <td colSpan="3" className="text-left">No playlists available</td>
-                            </tr>
+                            <tr><td colSpan="3" className="text-left">No playlists available</td></tr>
                         )}
                     </tbody>
                 </table>

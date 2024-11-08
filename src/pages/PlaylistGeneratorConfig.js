@@ -54,8 +54,8 @@ const Config = () => {
 
         try {
             const endpoint = playlistType === 'liked_songs'
-                ? 'http://localhost:8000/user/recommendations/liked_songs'
-                : 'http://localhost:8000/user/recommendations/playlists';
+                ? 'https://uxk5aw44j1.execute-api.eu-west-2.amazonaws.com/dev/user/recommendations/liked_songs'
+                : 'https://uxk5aw44j1.execute-api.eu-west-2.amazonaws.com/dev/user/recommendations/playlists';
 
             const response = await axios.post(endpoint, {
                 length: playlistLength,
@@ -80,7 +80,7 @@ const Config = () => {
         setLoadingSpotify(true); // Start loading spinner
 
         try {
-            const response = await axios.post('http://localhost:8000/added', {
+            const response = await axios.post('https://uxk5aw44j1.execute-api.eu-west-2.amazonaws.com/dev/added', {
                 length: playlistLength,
                 weights: weights,
                 type: playlistType,

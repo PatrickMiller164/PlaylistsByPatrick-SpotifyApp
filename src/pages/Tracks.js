@@ -3,7 +3,7 @@ import axios from 'axios';
 import Layout from '../segments/Layout';
 import LoadingSpinner from '../segments/LoadingSpinner';
 import '../css/Table.css';
-import spotifyLogo from './spotify-logo.png'; // Import your Spotify logo
+import spotifyLogo from './spotify-logo.png';
 
 const Tracks = () => {
     const [tracks, setTracks] = useState([]);
@@ -13,7 +13,7 @@ const Tracks = () => {
     useEffect(() => {
         const fetchTracks = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/user/tracks', { withCredentials: true });
+                const response = await axios.get('https://uxk5aw44j1.execute-api.eu-west-2.amazonaws.com/dev/user/tracks', { withCredentials: true });
                 setTracks(response.data.tracks);
             } catch (error) {
                 setError(error);
@@ -42,20 +42,12 @@ const Tracks = () => {
             <h4 className="text-left">Your Tracks</h4>
             <div className="table-container mt-4">
                 <table className="table table-striped">
-                    <thead>
-                        <tr>
-                            <th></th> {/* New column for the logo */}
-                            <th>Name</th>
-                            <th>Artist</th>
-                            <th>Length (m:ss)</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th></th><th>Name</th><th>Artist</th><th>Length (m:ss)</th></tr></thead>
                     <tbody>
                         {tracks.length > 0 ? (
                             tracks.map((track, index) => (
                                 <tr key={index}>
                                     <td>
-                                        {/* Add the Spotify logo with a link */}
                                         <a href={track.URL} target="_blank" rel="noopener noreferrer">
                                             <img src={spotifyLogo} alt="Spotify Logo" className="spotify-logo" />
                                         </a>
@@ -70,9 +62,7 @@ const Tracks = () => {
                                 </tr>
                             ))
                         ) : (
-                            <tr>
-                                <td colSpan="4" className="text-left">No tracks available</td>
-                            </tr>
+                            <tr><td colSpan="4" className="text-left">No tracks available</td></tr>
                         )}
                     </tbody>
                 </table>

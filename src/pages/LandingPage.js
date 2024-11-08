@@ -9,7 +9,7 @@ const LandingPage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:8000/");
+                const response = await axios.get("https://uxk5aw44j1.execute-api.eu-west-2.amazonaws.com/dev/");
                 setSpotifyAuthUrl(response.data.spotify_auth_url);
             } catch (error) {
                 console.error("Error fetching data:", error);

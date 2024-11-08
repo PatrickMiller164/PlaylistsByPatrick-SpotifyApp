@@ -19,7 +19,7 @@ const Navbar = () => {
 
     const handleLogout = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/logout', { withCredentials: true });
+            const response = await axios.get('https://uxk5aw44j1.execute-api.eu-west-2.amazonaws.com/dev/logout', { withCredentials: true });
             if (response.status === 200) {
                 navigate('/'); // Redirect to the landing page
             }
@@ -31,13 +31,17 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
-                <div className="d-flex justify-content-between align-items-center w-100"> {/* Flexbox for centering */}
+                <div className="d-flex justify-content-between align-items-center w-100">
                     <NavLink className="navbar-brand" to="/home">Playlists by Patrick</NavLink>
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav">
                             {navItems.map((item) => (
                                 <li className="nav-item" key={item.path}>
-                                    <NavLink className="nav-link" to={item.path} activeClassName="active">
+                                    {/* Use className with a function to apply 'active' when the link is active */}
+                                    <NavLink
+                                        to={item.path}
+                                        className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+                                    >
                                         {item.name}
                                     </NavLink>
                                 </li>
