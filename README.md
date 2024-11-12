@@ -4,7 +4,8 @@
 
 This repository houses the front-end code for my app. It was built using React, and is currently 
 deployed on AWS via AWS Amplify. This is connected to the back-end via AWS API Gateway and AWS Lambda. 
-The back-end was written in Python, and then converted into a webframework using FastAPI.
+The back-end was written in Python, and then converted into a web framework using FastAPI. 
+I use the Supabase Python SDK for database management and Terraform to write the server infrastructure as code.
 
 Here is the link to my app: https://main.d2me7vq60w2nib.amplifyapp.com/
 
@@ -40,7 +41,7 @@ When you generate a playlist, the app ranks songs based on a composite score der
 5. Date Added to Library: Newer songs score higher than older ones.
 
 Each factor is given a 20% weighting by default, but you can customise these weights on the setup page to tailor 
-your recommendations. For example, if you’d like more songs from your top artists, you can increase this factor weighting.
+the recommendations.
 
 ### User Experience Example
 
@@ -51,7 +52,7 @@ All recommendations will be tracks that are in a user's playlists but not in a u
     ![Alt text](images/1_landing_page.png)
 
 2. Upon pressing _Login via Spotify_, they are redirected to the Spotify login page where they enter their credentials
-and give authorise several position scopes. They are then redirected to the home page where they can read about what this app
+and authorise the app to access to their library. They are then redirected to the home page where they can read about what this app
 does and how it works.
     ![Alt text](images/2_home_page.png)
 
@@ -61,10 +62,9 @@ select the number of songs they want in the generated playlist, and select the w
     ![Alt text](images/8a_playlist_generator.png)
 
 4. After the user presses _Generate Playlist_, the generated playlist is displayed in a table, along with the
-option to add this playlist to Spotify. The 100 songs in this playlist are the 100 songs which had the highest composite
-scores according the factor weighting inputted, with the top-scoring track at the top of the list. If the user wants to
-try a different weighting, they can toggle the sliders to generate a new playlist. Once happy, the user has the option
-to add the playlist to their spotify account. 
+option to add this playlist to Spotify. The songs in this playlist are the highest-scoring songs according to the 
+factor weighting inputted. If the user wants to try a different weighting, they can toggle the sliders to generate a new playlist. 
+Once happy, the user has the option to add the playlist to their spotify account. 
     ![Alt text](images/8b_playlist_generator.png)
 
 5. Once _Add to Spotify_ is pressed, the user can click on _View in Spotify_, which will redirect 
