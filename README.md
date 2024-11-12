@@ -1,4 +1,4 @@
-# Welcome to my Spotify App: Playlists by Patrick
+# Welcome to my Spotify App, Playlists by Patrick
 
 ### About this Repository
 
