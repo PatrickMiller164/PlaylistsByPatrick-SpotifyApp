@@ -2,7 +2,7 @@
 
 ### About this Repository
 
-This repository houses the front-end code for my app. It was built using React, and is currently 
+This repository houses the front-end code for my app. It is built using React, and is currently 
 deployed on AWS via AWS Amplify. This is connected to the back-end via AWS API Gateway and AWS Lambda. 
 The back-end was written in Python, and then converted into a web framework using FastAPI. 
 I use the Supabase Python SDK for database management and Terraform to write the server infrastructure as code.
@@ -12,6 +12,9 @@ Here is the link to my app: https://main.d2me7vq60w2nib.amplifyapp.com/
 This app uses the Spotify API and is currently in development mode. To roll this app out publicly, 
 I have submitted a Quota Extension Request. For now only registered users can use it's functions.
 If you would like to give it a go, please do reach out to me! I'll need your name and Spotify account email.
+
+I started developing this app at the beginning of October 2024. The current version is a minimum viable product (MVP) 
+and I am currently working on improving the front-end user experience.
 
 ### What This App Does
 
