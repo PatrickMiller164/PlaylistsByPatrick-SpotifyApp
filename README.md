@@ -1,6 +1,6 @@
 # Welcome to my Spotify App, Playlists by Patrick
 
-### About this Repository
+### Background Info
 
 This repository houses the front-end code for my app. It is built using React, and is currently 
 deployed on AWS via AWS Amplify. This is connected to the back-end via AWS API Gateway and AWS Lambda. 
@@ -43,7 +43,7 @@ When you generate a playlist, the app ranks songs based on a composite score der
 4. Recently Added Score: Songs associated with recently added favourites get preference.
 5. Date Added to Library: Newer songs score higher than older ones.
 
-Each factor is given a 20% weighting by default, but you can customise these weights on the setup page to tailor 
+Each factor is given a 20% weighting by default, and you can customise these weights on the setup page to tailor 
 the recommendations.
 
 ### User Experience Example
