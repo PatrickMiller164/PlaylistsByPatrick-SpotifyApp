@@ -1,0 +1,5 @@
+.footer-image {
+    width: 800px;    /* Fixed width */
+    height: auto;    /* Adjust height automatically */
+    border: 2px solid black
+}
