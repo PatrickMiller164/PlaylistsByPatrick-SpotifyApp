@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import demoImage from './demo.png';
+import '../css/DemoImage.css';
 
 const LandingPage = () => {
     const [spotifyAuthUrl, setSpotifyAuthUrl] = useState(null);
@@ -49,12 +50,27 @@ const LandingPage = () => {
                 </div>
             </div>
 
+            {/* Tech Stack Section */}
+            <div className="row justify-content-center mt-5">
+                <div className="col-md-6 col-lg-6 text-center">
+                    <h4>Tech Stack</h4>
+                    <p>
+                        This MVP, started in October 2024, uses React for the front-end and Python with FastAPI to
+                        convert the backend to a web framework. The app is deployed via AWS Amplify, with AWS Lambda
+                        and API Gateway for serverless infrastructure, Supabase for database management, and
+                        Terraform for Infrastructure as Code (IAC).
+                    </p>
+                </div>
+            </div>
+
             {/* Add your image at the bottom */}
             <footer className="text-center mt-5">
+                <h4>The Playlist Generator Feature</h4>
                 <img
                     src={demoImage}
                     alt="Footer Image"
                     className="footer-image"
+                    loading="lazy"
                 />
             </footer>
         </div>
