@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import demoImage from './demo.png';
 
 const LandingPage = () => {
     const [spotifyAuthUrl, setSpotifyAuthUrl] = useState(null);
@@ -47,6 +48,15 @@ const LandingPage = () => {
                     )}
                 </div>
             </div>
+
+            {/* Add your image at the bottom */}
+            <footer className="text-center mt-5">
+                <img
+                    src={demoImage}
+                    alt="Footer Image"
+                    className="footer-image"
+                />
+            </footer>
         </div>
     );
 };
