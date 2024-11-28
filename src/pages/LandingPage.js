@@ -50,10 +50,10 @@ const LandingPage = () => {
                 </div>
             </div>
 
-            {/* Tech Stack Section 222 */}
+            {/* Tech Stack Section */}
             <div className="row justify-content-center mt-5">
                 <div className="col-md-6 col-lg-6 text-center">
-                    <h4>Tech Stack</h4>
+                    <h4>Tech Stack 222</h4>
                     <p>
                         This MVP, started in October 2024, uses React for the front-end and Python with FastAPI to
                         convert the backend to a web framework. The app is deployed via AWS Amplify, with AWS Lambda
