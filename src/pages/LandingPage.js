@@ -4,9 +4,11 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import demoImage from './demo.png';
 import '../css/DemoImage.css';
+import { Modal, Button } from 'react-bootstrap';  // Import Bootstrap Modal components
 
 const LandingPage = () => {
     const [spotifyAuthUrl, setSpotifyAuthUrl] = useState(null);
+    const [showModal, setShowModal] = useState(true); // State to control modal visibility
 
     useEffect(() => {
         const fetchData = async () => {
@@ -26,8 +28,10 @@ const LandingPage = () => {
         }
     };
 
+    const handleCloseModal = () => setShowModal(false); // Close modal function
+
     return (
-            <div className="container mt-5 mb-5">
+        <div className="container mt-5 mb-5">
             {/* Development Mode Popup */}
             <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
@@ -46,16 +50,15 @@ const LandingPage = () => {
                 </Modal.Footer>
             </Modal>
 
-        <div className="container mt-5 mb-5">
             <div className="row justify-content-center">
                 <div className="col-md-6 col-lg-6">
                     <h1 className="mb-4 text-center">Welcome to Playlists by Patrick</h1>
                     {spotifyAuthUrl ? (
                         <div className="text-center">
                             <p>
-                            If you have a large collection of playlists and liked songs on Spotify,
-                            this app is designed for you. It aims to help Spotify users who want to organise
-                            their music efficiently.
+                                If you have a large collection of playlists and liked songs on Spotify,
+                                this app is designed for you. It aims to help Spotify users who want to organise
+                                their music efficiently.
                             </p>
                             <button onClick={handleLogin} className="btn btn-primary btn-lg">
                                 Login via Spotify
