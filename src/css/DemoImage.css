@@ -3,3 +3,34 @@
     height: auto;    /* Adjust height automatically */
     border: 2px solid black
 }
+
+/* DemoImage.css or another relevant CSS file */
+
+/* Overlay that covers the entire screen */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensures the popup appears on top */
+}
+
+/* Popup box style */
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;  /* Set a fixed width */
+    text-align: center;
+}
+
+/* Button style inside the popup */
+.popup button {
+    margin-top: 20px;
+}

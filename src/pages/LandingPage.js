@@ -4,11 +4,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import demoImage from './demo.png';
 import '../css/DemoImage.css';
-import { Modal, Button } from 'react-bootstrap';  // Import Bootstrap Modal components
 
 const LandingPage = () => {
     const [spotifyAuthUrl, setSpotifyAuthUrl] = useState(null);
-    const [showModal, setShowModal] = useState(true); // State to control modal visibility
+    const [showPopup, setShowPopup] = useState(true);  // State for controlling popup visibility
 
     useEffect(() => {
         const fetchData = async () => {
@@ -28,27 +27,25 @@ const LandingPage = () => {
         }
     };
 
-    const handleCloseModal = () => setShowModal(false); // Close modal function
+    const closePopup = () => setShowPopup(false); // Function to close the popup
 
     return (
         <div className="container mt-5 mb-5">
-            {/* Development Mode Popup */}
-            <Modal show={showModal} onHide={handleCloseModal}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Development Mode</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <p>
-                        This app is currently in development mode. Some features may not be fully functional.
-                        We appreciate your patience as we work on improving the experience!
-                    </p>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleCloseModal}>
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+            {/* Custom Popup */}
+            {showPopup && (
+                <div className="popup-overlay">
+                    <div className="popup">
+                        <h4>Development Mode</h4>
+                        <p>
+                            This app is currently in development mode. Some features may not be fully functional.
+                            We appreciate your patience as we work on improving the experience!
+                        </p>
+                        <button onClick={closePopup} className="btn btn-secondary">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
 
             <div className="row justify-content-center">
                 <div className="col-md-6 col-lg-6">
