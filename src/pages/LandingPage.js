@@ -37,10 +37,10 @@ const LandingPage = () => {
                     <div className="popup">
                         <h4>Development Mode</h4>
                         <p>
-                            This app is currently in development mode. Some features may not be fully functional.
-                            We appreciate your patience as we work on improving the experience!
+                            "Playlists by Patrick" is currently in development mode. At this stage, users can only access the app if I manually add their Spotify email to the system.
+                            I’ve already submitted my application for approval from Spotify, and once it’s approved, the app will be available to everyone!
                         </p>
-                        <button onClick={closePopup} className="btn btn-secondary">
+                        <button onClick={closePopup} className="btn btn-secondary mt-3">
                             Close
                         </button>
                     </div>
