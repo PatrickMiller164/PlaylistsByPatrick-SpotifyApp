@@ -50,7 +50,7 @@ const LandingPage = () => {
                 </div>
             </div>
 
-            {/* Tech Stack Section */}
+            {/* Tech Stack Section 222 */}
             <div className="row justify-content-center mt-5">
                 <div className="col-md-6 col-lg-6 text-center">
                     <h4>Tech Stack</h4>
