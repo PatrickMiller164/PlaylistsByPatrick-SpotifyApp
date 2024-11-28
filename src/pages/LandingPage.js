@@ -27,6 +27,25 @@ const LandingPage = () => {
     };
 
     return (
+            <div className="container mt-5 mb-5">
+            {/* Development Mode Popup */}
+            <Modal show={showModal} onHide={handleCloseModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Development Mode</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>
+                        This app is currently in development mode. Some features may not be fully functional.
+                        We appreciate your patience as we work on improving the experience!
+                    </p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseModal}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
         <div className="container mt-5 mb-5">
             <div className="row justify-content-center">
                 <div className="col-md-6 col-lg-6">
@@ -53,7 +72,7 @@ const LandingPage = () => {
             {/* Tech Stack Section */}
             <div className="row justify-content-center mt-5">
                 <div className="col-md-6 col-lg-6 text-center">
-                    <h4>Tech Stack 222</h4>
+                    <h4>Tech Stack</h4>
                     <p>
                         This MVP, started in October 2024, uses React for the front-end and Python with FastAPI to
                         convert the backend to a web framework. The app is deployed via AWS Amplify, with AWS Lambda
