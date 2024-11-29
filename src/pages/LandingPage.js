@@ -37,8 +37,10 @@ const LandingPage = () => {
                     <div className="popup">
                         <h4>Development Mode</h4>
                         <p>
-                            "Playlists by Patrick" is currently in development mode. At this stage, users can only access the app if I manually add their Spotify email to the system.
-                            I’ve already submitted my application for approval from Spotify, and once it’s approved, the app will be available to everyone!
+                        “Playlists by Patrick” is currently in development mode. At this stage, access to the app is
+                        restricted, and users can only be added manually by providing their Spotify email.
+                        An application for approval has been submitted to Spotify, and once approved, the app will
+                        be publicly accessible to all users.
                         </p>
                         <button onClick={closePopup} className="btn btn-secondary mt-3">
                             Close
