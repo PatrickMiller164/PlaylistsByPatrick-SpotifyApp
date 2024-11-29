@@ -1,4 +1,4 @@
-# Welcome to my Spotify App, Playlists by Patrick
+# Welcome to playlistsbypatrick.com
 
 ## Table of Contents
 - [Background Info](#background-info)
