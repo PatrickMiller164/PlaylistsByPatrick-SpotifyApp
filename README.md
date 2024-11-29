@@ -1,13 +1,21 @@
 # Welcome to my Spotify App, Playlists by Patrick
 
-### Background Info
+## Table of Contents
+- [Background Info](#background-info)
+- [What This App Does](#what-this-app-does)
+- [Why Personalisation Matters](#why-personalisation-matters)
+- [How the Recommendation Algorithm Works](#how-the-recommendation-algorithm-works)
+- [User Experience Example With Screenshots](#user-experience-example)
+- [Other Features](#other-features)
+
+## Background Info
 
 This repository houses the front-end code for my app. It is built using React, and is currently 
 deployed on AWS via AWS Amplify. This is connected to the back-end via AWS API Gateway and AWS Lambda. 
 The back-end was written in Python, and then converted into a web framework using FastAPI. 
 I use the Supabase Python SDK for database management and Terraform to write the server infrastructure as code.
 
-Here is the link to my app: https://main.d2me7vq60w2nib.amplifyapp.com/
+Here is the link: https://playlistsbypatrick.com
 
 This app uses the Spotify API and is currently in development mode. To roll this app out publicly, 
 I have submitted a Quota Extension Request. For now only registered users can use it's functions.
@@ -16,7 +24,7 @@ If you would like to give it a go, please do reach out to me! I'll need your nam
 I started developing this app at the beginning of October 2024. The current version is a minimum viable product (MVP) 
 and I am currently working on improving the front-end user experience.
 
-### What This App Does
+## What This App Does
 
 This app securely accesses your listening data and preferences to create a unique profile in order to
 generate customised playlists with two main features:
@@ -24,7 +32,7 @@ generate customised playlists with two main features:
 1. Curated Playlists: Finds songs that exist in one area of your library but not another, helping you discover overlooked favourites.
 2. Personalised Recommendations: Suggests songs that truly reflect your listening habits, saving you from sorting through vast collections.
 
-### Why Personalisation Matters
+## Why Personalisation Matters
 
 With large music libraries, managing playlists can be overwhelming. 
 For instance, if you have thousands of songs spread across different playlists and your Liked Songs, 
@@ -33,7 +41,7 @@ This app aims to make playlist management easier by using a five-factor algorith
 to want to add your playlists or Liked Songs.
 
 
-### How the Recommendation Algorithm Works
+## How the Recommendation Algorithm Works
 
 When you generate a playlist, the app ranks songs based on a composite score derived from five factors:
 
@@ -46,7 +54,7 @@ When you generate a playlist, the app ranks songs based on a composite score der
 Each factor is given a 20% weighting by default, and you can customise these weights on the setup page to tailor 
 the recommendations.
 
-### User Experience Example
+## User Experience Example
 
 Here is an example of how the user would use this app to generate a playlist of track recommendations for their Liked Songs.
 All recommendations will be tracks that are in a user's playlists but not in a user's Liked Songs.
@@ -74,7 +82,7 @@ Once happy, the user has the option to add the playlist to their spotify account
 them to their newly created playlist.
     ![Alt text](images/9_generated_playlist.png)
 
-### Other Features
+## Other Features
 
 As seen on the navigation bar, this app also lets users view information about their Spotify library. 
 
@@ -83,5 +91,3 @@ For example, your playlists
 
 and your top artists:
     ![Alt text](images/6_your_top_artists.png)
-
-
